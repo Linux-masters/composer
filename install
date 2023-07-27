@@ -1,0 +1,19 @@
+# Url for Donload https://getcomposer.org/doc/00-intro.md#globally
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+# After use composer from any folder. ( instead use commabd php composer.phar ) 
+mv composer.phar /usr/local/bin/composer
+# Now the command composer will work anywhere
+composer 
+
+# Setup composer json file with init command
+composer init
+#Block Vendor folder 
+/vendor/
+
+# run modifications in dependencies
+composer update
