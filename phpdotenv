@@ -1,0 +1,9 @@
+composer require vlucas/phpdotenv
+
+nano demo.php
+<?php
+require 'vendor/autoload.php'
+$dotenv = Dotenv/Dotenv::createImmutavle(__DIR__); 
+$dotenv->load();
+
+echo 'secrete' . getenv(KEY_ENV);
